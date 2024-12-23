@@ -1,5 +1,4 @@
 title: Les Pieds sur Terre
 logo: 
-#description: photos de bouches parlant
-show_downloads: true
+show_downloads: false
 remote_theme: vfvong/jekyll-theme-quartz
