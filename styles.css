@@ -3,6 +3,7 @@ header {
   background: #28437A; /* Couleur du header */
   color: white;
   padding: 1rem 0;
+  text-align: center;
 }
 
 header .container {
@@ -10,13 +11,8 @@ header .container {
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  justify-content: space-between; /* Sépare les blocs gauche et droit */
-  align-items: center; /* Centre verticalement */
-}
-
-header .title-container {
-  display: flex;
-  flex-direction: column; /* Organisation verticale pour titre et légende */
+  flex-direction: column; /* Organisation verticale */
+  align-items: center; /* Centrer les éléments horizontalement */
 }
 
 header h1 {
@@ -27,13 +23,14 @@ header h1 {
 .header-subtitle {
   font-size: 1rem;
   font-style: italic;
-  margin-bottom: 0; /* Supprime tout espacement supplémentaire */
+  margin-bottom: 1rem;
 }
 
 header nav ul {
   list-style: none;
   display: flex;
   gap: 15px;
+  justify-content: center; /* Centre les liens */
 }
 
 header nav ul li a {
@@ -45,71 +42,4 @@ header nav ul li a {
 
 header nav ul li a:hover {
   color: #ffeb3b;
-}
-
-/* Articles Container */
-.articles-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px; /* Écart entre articles */
-  justify-content: space-between;
-  max-width: 1200px; /* Contenu centré */
-  margin: 0 auto;
-  background-color: #F9F4EA; /* Fond des conteneurs */
-  padding: 1rem; /* Ajoute un peu d'espace autour */
-  border-radius: 10px; /* Coins légèrement arrondis */
-}
-
-article {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  width: calc(32% - 10px); /* Largeur des articles */
-  height: 340px; /* Hauteur fixée pour un style cohérent */
-  padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-article img {
-  width: 100%;
-  height: 160px; /* Hauteur fixe pour les images */
-  object-fit: cover; /* Les images occupent l'espace avec une mise à l'échelle harmonieuse */
-  border-radius: 10px;
-  margin-bottom: 0.5rem;
-}
-
-article h3 {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-article p {
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-}
-
-article a {
-  color: #0078d4;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-article a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
-}
-
-footer p {
-  font-size: 0.9rem;
 }
