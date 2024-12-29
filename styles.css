@@ -77,7 +77,7 @@ article {
   background: white;
   border: 1px solid #ddd;
   border-radius: 10px;
-  width: calc(50% - 10px); /* Deux articles par ligne */
+  width: calc(33.33% - 13px); /* Trois articles par ligne */
   padding: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -88,7 +88,7 @@ article {
 
 article img {
   width: 100%;
-  max-width: 150px;
+  max-width: 120px;
   border-radius: 10px;
   margin-bottom: 0.5rem;
 }
