@@ -67,17 +67,34 @@ main {
   display: inline-block;
 }
 
+.articles-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 article {
   background: white;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 10px;
+  width: calc(50% - 10px); /* Deux articles par ligne */
   padding: 1rem;
-  margin-bottom: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+article img {
+  width: 100%;
+  max-width: 150px;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
 }
 
 article h3 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
