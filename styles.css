@@ -1,23 +1,8 @@
-/* Reset de base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
 /* Header */
 header {
   background: #28437A; /* Couleur du header */
   color: white;
   padding: 1rem 0;
-  text-align: center;
 }
 
 header .container {
@@ -25,8 +10,13 @@ header .container {
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  flex-direction: column; /* Organisation verticale */
-  align-items: center; /* Centrer les éléments horizontalement */
+  justify-content: space-between; /* Sépare les blocs gauche et droit */
+  align-items: center; /* Centre verticalement */
+}
+
+header .title-container {
+  display: flex;
+  flex-direction: column; /* Organisation verticale pour titre et légende */
 }
 
 header h1 {
@@ -37,14 +27,13 @@ header h1 {
 .header-subtitle {
   font-size: 1rem;
   font-style: italic;
-  margin-bottom: 1rem;
+  margin-bottom: 0; /* Supprime tout espacement supplémentaire */
 }
 
 header nav ul {
   list-style: none;
   display: flex;
   gap: 15px;
-  justify-content: center; /* Centre les liens */
 }
 
 header nav ul li a {
@@ -58,33 +47,7 @@ header nav ul li a:hover {
   color: #ffeb3b;
 }
 
-/* Main Content */
-main {
-  margin: 0; /* Pas d'espacement autour des sections */
-  padding: 0;
-}
-
-.section {
-  width: 100%; /* Prend toute la largeur de l'écran */
-  padding: 2rem 20px; /* Ajoute un peu d'espace interne */
-  border-radius: 0; /* Supprime tout arrondi */
-}
-
-.section:nth-child(odd) {
-  background-color: #E9D7C0; /* Fond beige clair pour sections impaires */
-}
-
-.section:nth-child(even) {
-  background-color: #FFFFFF; /* Fond blanc pour sections paires */
-}
-
-.section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 2rem; /* Espacement accru avec les containers */
-  color: #000; /* Titres de section en noir */
-  text-decoration: none; /* Supprime la bordure sous les titres */
-}
-
+/* Articles Container */
 .articles-container {
   display: flex;
   flex-wrap: wrap;
@@ -92,6 +55,9 @@ main {
   justify-content: space-between;
   max-width: 1200px; /* Contenu centré */
   margin: 0 auto;
+  background-color: #F9F4EA; /* Fond des conteneurs */
+  padding: 1rem; /* Ajoute un peu d'espace autour */
+  border-radius: 10px; /* Coins légèrement arrondis */
 }
 
 article {
