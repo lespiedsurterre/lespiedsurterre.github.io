@@ -51,15 +51,14 @@ header nav ul li a:hover {
 
 /* Main Content */
 main {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 20px;
+  margin: 0; /* Pas d'espacement autour des sections */
+  padding: 0;
 }
 
 .section {
-  margin-bottom: 2rem;
-  padding: 2rem 1rem;
-  border-radius: 10px;
+  width: 100%; /* Prend toute la largeur de l'écran */
+  padding: 2rem 20px; /* Ajoute un peu d'espace interne */
+  border-radius: 0; /* Supprime tout arrondi */
 }
 
 .section:nth-child(odd) {
@@ -80,8 +79,10 @@ main {
 .articles-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px; /* Écart entre articles réduit */
+  gap: 15px; /* Écart entre articles */
   justify-content: space-between;
+  max-width: 1200px; /* Contenu centré */
+  margin: 0 auto;
 }
 
 article {
