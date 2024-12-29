@@ -14,15 +14,13 @@ body {
 
 /* Header */
 header {
-  background: #0078d4;
+  background: #28437A; /* Nouvelle couleur du header */
   color: white;
   padding: 1rem 0;
+  text-align: center; /* Centre le contenu du header */
 }
 
 header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -30,12 +28,20 @@ header .container {
 
 header h1 {
   font-size: 2rem;
+  margin-bottom: 0.5rem; /* Espacement avec la légende */
+}
+
+.header-subtitle {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 
 header nav ul {
   list-style: none;
   display: flex;
   gap: 15px;
+  justify-content: center; /* Centrer les liens */
 }
 
 header nav ul li a {
@@ -71,9 +77,9 @@ main {
 
 .section h2 {
   font-size: 1.8rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #0078d4;
-  display: inline-block;
+  margin-bottom: 2rem; /* Espacement accru avec les containers */
+  color: #000; /* Titres de section en noir */
+  text-decoration: none; /* Supprime la bordure sous les titres */
 }
 
 .articles-container {
