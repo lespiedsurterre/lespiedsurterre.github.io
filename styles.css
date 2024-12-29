@@ -89,7 +89,7 @@ article {
 
 article img {
   width: 100%;
-  max-width: 100px;
+  height: auto; /* Permet de garder les proportions */
   border-radius: 10px;
   margin-bottom: 0.5rem;
 }
