@@ -58,6 +58,16 @@ main {
 
 .section {
   margin-bottom: 2rem;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+}
+
+.section:nth-child(odd) {
+  background-color: #E9D7C0; /* Fond beige clair pour sections impaires */
+}
+
+.section:nth-child(even) {
+  background-color: #FFFFFF; /* Fond blanc pour sections paires */
 }
 
 .section h2 {
@@ -70,7 +80,7 @@ main {
 .articles-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px; /* Réduction de l'écart entre les articles */
+  gap: 15px; /* Écart entre articles réduit */
   justify-content: space-between;
 }
 
@@ -78,7 +88,8 @@ article {
   background: white;
   border: 1px solid #ddd;
   border-radius: 10px;
-  width: calc(32% - 10px); /* Largeur plus importante pour allonger les vignettes */
+  width: calc(32% - 10px); /* Largeur des articles */
+  height: 340px; /* Hauteur fixée pour un style cohérent */
   padding: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -89,7 +100,8 @@ article {
 
 article img {
   width: 100%;
-  height: auto; /* Assure que l'image occupe toute la largeur du conteneur */
+  height: 160px; /* Hauteur fixe pour les images */
+  object-fit: cover; /* Les images occupent l'espace avec une mise à l'échelle harmonieuse */
   border-radius: 10px;
   margin-bottom: 0.5rem;
 }
