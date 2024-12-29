@@ -71,13 +71,14 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: space-between;
 }
 
 article {
   background: white;
   border: 1px solid #ddd;
   border-radius: 10px;
-  width: calc(33.33% - 13px); /* Trois articles par ligne */
+  width: calc(30% - 10px); /* Trois articles par ligne avec espace entre eux */
   padding: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -88,18 +89,19 @@ article {
 
 article img {
   width: 100%;
-  max-width: 120px;
+  max-width: 100px;
   border-radius: 10px;
   margin-bottom: 0.5rem;
 }
 
 article h3 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
 article p {
   margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 
 article a {
