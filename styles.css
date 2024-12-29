@@ -70,7 +70,7 @@ main {
 .articles-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px; /* Réduction de l'écart entre les articles */
   justify-content: space-between;
 }
 
@@ -78,7 +78,7 @@ article {
   background: white;
   border: 1px solid #ddd;
   border-radius: 10px;
-  width: calc(30% - 10px); /* Trois articles par ligne avec espace entre eux */
+  width: calc(32% - 10px); /* Largeur plus importante pour allonger les vignettes */
   padding: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -89,7 +89,7 @@ article {
 
 article img {
   width: 100%;
-  height: auto; /* Permet de garder les proportions */
+  height: auto; /* Assure que l'image occupe toute la largeur du conteneur */
   border-radius: 10px;
   margin-bottom: 0.5rem;
 }
