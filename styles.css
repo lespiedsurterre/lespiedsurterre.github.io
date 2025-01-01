@@ -1,45 +1,162 @@
-/* Header */
-header {
-  background: #28437A; /* Couleur du header */
-  color: white;
-  padding: 1rem 0;
-  text-align: center;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #FFFFFF;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #8EA58C;
+  color: white;
+  padding: 1rem 0;
+}
+
+.header-container {
   display: flex;
-  flex-direction: column; /* Organisation verticale */
-  align-items: center; /* Centrer les éléments horizontalement */
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.header-links {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.header-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 0.9rem;
+}
+
+.header-links a:hover {
+  text-decoration: underline;
 }
 
 header h1 {
   font-size: 2rem;
-  margin-bottom: 0.5rem; /* Espacement avec la légende */
+  margin: 1rem 0;
+  text-align: center;
 }
 
-.header-subtitle {
-  font-size: 1rem;
-  font-style: italic;
-  margin-bottom: 1rem;
+/* Main Section */
+main {
+  padding: 1rem;
 }
 
-header nav ul {
-  list-style: none;
+.latest-articles {
   display: flex;
-  gap: 15px;
-  justify-content: center; /* Centre les liens */
+  flex-direction: column;
+  gap: 2rem;
 }
 
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+/* Main Article */
+.main-article {
+  display: flex;
+  flex-direction: row;
+  background-color: #BFCFBB;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
-header nav ul li a:hover {
-  color: #ffeb3b;
+.main-article img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.main-article-text {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-article h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.main-article .description {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.main-article .date {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Secondary Articles */
+.secondary-articles {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.secondary-article {
+  flex: 1;
+  position: relative;
+}
+
+.article-content {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.article-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.article-content .overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #BFCFBB;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  transition: top 0.3s ease-in-out;
+}
+
+.article-content:hover img {
+  transform: scale(1.1);
+}
+
+.article-content:hover .overlay {
+  top: 0;
+}
+
+.overlay h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.overlay .description {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.overlay .date {
+  font-size: 0.8rem;
+  color: #555;
 }
