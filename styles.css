@@ -1,3 +1,50 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #FFFFFF;
+  padding: 0 10vw; /* Marges externes plus larges */
+}
+
+/* Header */
+header {
+  background-color: #0072B5; /* French Blue */
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.nav-links {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
 /* Main Content */
 main {
   padding: 2rem 0;
@@ -14,4 +61,107 @@ main {
   background-color: #E3E6E4; /* Mist */
   position: relative;
   z-index: 1;
+}
+
+.featured-article img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+.featured-article .text-overlay {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.featured-article h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.featured-article p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.featured-article span {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Previous Articles */
+.previous-articles {
+  display: flex;
+  gap: 15px;
+  margin-top: 2rem;
+}
+
+.previous-articles .article {
+  width: calc(50% - 7.5px);
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #E3E6E4; /* Mist */
+}
+
+.previous-articles img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.previous-articles .text-overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: #E3E6E4; /* Mist */
+  transition: top 0.3s ease-in-out;
+}
+
+.previous-articles:hover .text-overlay {
+  top: 0;
+}
+
+.previous-articles h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.previous-articles p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.previous-articles span {
+  font-size: 0.8rem;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 0 5vw; /* Réduction des marges pour petits écrans */
+  }
+
+  .featured-article .featured-content {
+    flex-direction: column;
+  }
+
+  .featured-article img,
+  .featured-article .text-overlay {
+    width: 100%;
+  }
+
+  .previous-articles {
+    flex-direction: column;
+  }
+
+  .previous-articles .article {
+    width: 100%;
+  }
 }
